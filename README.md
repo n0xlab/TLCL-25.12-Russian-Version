@@ -1,134 +1,142 @@
-# 🐧 Командная строка Linux — Полное руководство
+# The Linux Command Line — Russian Translation
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Автор-Уильям%20Шоттс-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Издание-7--е%20интернет--издание-orange?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Язык-Русский-d62828?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Author-William%20Shotts-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Edition-25.12-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Language-Russian-d62828?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Shell-Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Лицензия-CC%20BY--NC--ND-16a34a?style=for-the-badge&logo=creativecommons"/>
+  <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND-16a34a?style=for-the-badge&logo=creativecommons"/>
 </p>
 
-> **«Командная строка Linux»** (*The Linux Command Line*) — книга Уильяма Шоттса, которая учит не набору заклинаний, а самому способу мышления в оболочке. Путь от первого приглашения `$` до полноценных сценариев на Bash: файлы и каталоги, права, процессы, перенаправление, регулярные выражения, обработка текста и программирование оболочки. Без графического интерфейса и «волшебных» рецептов — только то, что работает в любой системе Linux и UNIX.
+> **The Linux Command Line** by William Shotts teaches not a set of magic spells, but a way of thinking in the shell. It takes you from the first `$` prompt to complete Bash scripts: files and directories, permissions, processes, redirection, regular expressions, text processing and shell programming. No GUI and no "magic" recipes — only what works on any Linux and UNIX system.
+
+This repository contains an unofficial, non-commercial Russian translation of edition 25.12 (`TLCL-25.12-ru-book.pdf`).
 
 ---
 
-## ✨ Чем эта книга отличается
+## What Makes This Book Different
 
-- 🧠 **Обучение концепциям, а не командам** — вы понимаете, *почему* работает конвейер, а не заучиваете его
-- 🧩 **Единая линия повествования** — главы идут строго одна из другой, от `cd` до циклов `for`
-- ⌨️ **Только стандартные инструменты** — Bash и GNU coreutils, ничего экзотического
-- 🐚 **Акцент на Bash** — оболочка по умолчанию практически во всех дистрибутивах
-- 📜 **Полноценный раздел по сценариям** — больше десятка глав о программировании оболочки
-- 🔁 **Практические примеры** — реальные задачи администрирования вместо синтетических упражнений
-- 🆓 **Свободное распространение** — интернет-издание бесплатно доступно в PDF
-- 🔄 **Седьмое издание** — текст сверен с современными дистрибутивами и версиями утилит
-
----
-
-## 📚 Структура книги
-
-```
-Командная строка Linux (7-е интернет-издание)
-│
-├── Часть I. Изучаем командную оболочку
-│   ├── 01. Что такое командная оболочка
-│   ├── 02. Навигация
-│   ├── 03. Исследование системы
-│   ├── 04. Операции с файлами и каталогами
-│   ├── 05. Работа с командами
-│   ├── 06. Перенаправление ввода-вывода
-│   ├── 07. Взгляд на мир глазами оболочки (подстановки)
-│   ├── 08. Продвинутые приёмы работы с клавиатурой
-│   ├── 09. Права доступа
-│   └── 10. Процессы
-│
-├── Часть II. Конфигурация и окружение
-│   ├── 11. Окружение командной оболочки
-│   ├── 12. Знакомство с vi
-│   └── 13. Настройка приглашения к вводу
-│
-├── Часть III. Типичные задачи и основные инструменты
-│   ├── 14. Управление пакетами
-│   ├── 15. Накопители
-│   ├── 16. Сети
-│   ├── 17. Поиск файлов
-│   ├── 18. Архивация и резервное копирование
-│   ├── 19. Регулярные выражения
-│   ├── 20. Обработка текста
-│   ├── 21. Форматирование вывода
-│   ├── 22. Печать
-│   └── 23. Компиляция программ
-│
-└── Часть IV. Написание сценариев оболочки
-    ├── 24. Первый сценарий
-    ├── 25. Запуск проекта
-    ├── 26. Проектирование сверху вниз
-    ├── 27. Управляющая конструкция if
-    ├── 28. Чтение данных с клавиатуры
-    ├── 29. Циклы while и until
-    ├── 30. Поиск неисправностей в сценариях
-    ├── 31. Конструкция case
-    ├── 32. Позиционные параметры
-    ├── 33. Циклы for
-    ├── 34. Строки и числа
-    ├── 35. Массивы
-    └── 36. Дополнительные команды и приёмы
-```
+- **Concepts, not commands** — you understand *why* a pipeline works instead of memorizing it
+- **One continuous story** — chapters build strictly on each other, from `cd` to `for` loops
+- **Standard tools only** — Bash and GNU coreutils, nothing exotic
+- **Focus on Bash** — the default shell on almost every distribution
+- **A full scripting part** — more than a dozen chapters on shell programming
+- **Practical examples** — real administration tasks instead of synthetic exercises
+- **Free to share** — the online edition is available as a free PDF
+- **Up to date** — the text is checked against modern distributions and tool versions
 
 ---
 
-## ⚙️ Что понадобится
+## Book Structure
 
 ```
-Любой дистрибутив Linux  (Ubuntu, Debian, Fedora, Arch — не важно)
-Bash 4.x или новее
-Терминал
-~1 час в день и желание печатать руками
+The Linux Command Line (edition 25.12)
+│
+├── Part 1. Learning the Shell
+│   ├── 01. What Is the Shell?
+│   ├── 02. Navigation
+│   ├── 03. Exploring the System
+│   ├── 04. Manipulating Files and Directories
+│   ├── 05. Working with Commands
+│   ├── 06. Redirection
+│   ├── 07. Seeing the World as the Shell Sees It (expansion)
+│   ├── 08. Advanced Keyboard Tricks
+│   ├── 09. Permissions
+│   └── 10. Processes
+│
+├── Part 2. Configuration and the Environment
+│   ├── 11. The Environment
+│   ├── 12. A Gentle Introduction to vi
+│   └── 13. Customizing the Prompt
+│
+├── Part 3. Common Tasks and Essential Tools
+│   ├── 14. Package Management
+│   ├── 15. Storage Media
+│   ├── 16. Networking
+│   ├── 17. Searching for Files
+│   ├── 18. Archiving and Backup
+│   ├── 19. Regular Expressions
+│   ├── 20. Text Processing
+│   ├── 21. Formatting Output
+│   ├── 22. Printing
+│   └── 23. Compiling Programs
+│
+└── Part 4. Writing Shell Scripts
+    ├── 24. Writing Your First Script
+    ├── 25. Starting a Project
+    ├── 26. Top-Down Design
+    ├── 27. Flow Control: Branching with if
+    ├── 28. Reading Keyboard Input
+    ├── 29. Flow Control: Looping with while / until
+    ├── 30. Troubleshooting
+    ├── 31. Flow Control: Branching with case
+    ├── 32. Positional Parameters
+    ├── 33. Flow Control: Looping with for
+    ├── 34. Strings and Numbers
+    ├── 35. Arrays
+    └── 36. Exotica
 ```
 
-Проверить свою оболочку:
+---
+
+## Requirements
+
+```
+Any Linux distribution  (Ubuntu, Debian, Fedora, Arch — any will do)
+Bash 4.x or newer
+A terminal
+About an hour a day and the will to type by hand
+```
+
+Check your shell:
 
 ```bash
 echo $SHELL && bash --version
 ```
 
-> 💡 Нет Linux под рукой? Подойдут WSL2 в Windows, macOS (с поправкой на BSD-утилиты) или виртуальная машина с Ubuntu.
+> **Tip:** No Linux at hand? WSL2 on Windows, macOS (keep the BSD utilities in mind) or an Ubuntu virtual machine will do.
 
 ---
 
-## 🚀 Быстрый старт
+## Quick Start
 
-### 1. Откройте терминал
+### 1. Open a terminal
 
 ```bash
 # Ubuntu / GNOME
 Ctrl + Alt + T
 ```
 
-### 2. Убедитесь, что оболочка отвечает
+### 2. Make sure the shell responds
 
 ```bash
 whoami && pwd && date
 ```
 
-### 3. Создайте песочницу для экспериментов
+### 3. Create a sandbox for experiments
 
 ```bash
 mkdir -p ~/tlcl/playground && cd ~/tlcl/playground
 ```
 
-### 4. Пройдите первую главу прямо сейчас
+### 4. Try the first chapter right now
 
 ```bash
-ls -l           # посмотреть содержимое каталога
-cd /usr/share   # перейти в другой каталог
-cd -            # вернуться назад
-file /bin/bash  # узнать тип файла
-help cd         # справка по встроенной команде оболочки
-man ls          # полное руководство по программе
+# list the directory contents
+ls -l
+# go to another directory
+cd /usr/share
+# go back
+cd -
+# find out the file type
+file /bin/bash
+# help for a shell builtin
+help cd
+# full manual for a program
+man ls
 ```
 
-### 5. Выход
+### 5. Exit
 
 ```bash
 exit
@@ -136,102 +144,104 @@ exit
 
 ---
 
-## 🧭 Как читать
+## How to Read
 
 ```
-Читать главы последовательно — книга построена накопительно
+Read the chapters in order — the book builds step by step
               ↓
-Каждую команду из текста набирать руками в терминале
+Type every command from the text into the terminal yourself
               ↓
-Не копировать и вставлять: мышечная память — часть обучения
+Don't copy and paste: muscle memory is part of learning
               ↓
-Ломать и восстанавливать песочницу ~/tlcl/playground
+Break and rebuild the ~/tlcl/playground sandbox
               ↓
-После каждой главы — man по двум-трём новым командам
+After each chapter, read man for two or three new commands
               ↓
-Часть IV проходить только после Частей I–III
+Start Part 4 only after finishing Parts 1–3
 ```
 
 ---
 
-## 🧰 Основные инструменты по темам
+## Key Tools by Topic
 
-| Тема | Команды и инструменты |
+| Topic | Commands and tools |
 |---|---|
-| **Навигация** | `pwd`, `cd`, `ls` |
-| **Файлы и каталоги** | `cp`, `mv`, `rm`, `mkdir`, `ln` |
-| **Просмотр файлов** | `cat`, `less`, `head`, `tail`, `file` |
-| **Перенаправление** | `>`, `>>`, `<`, `\|`, `tee` |
-| **Подстановки** | `*`, `?`, `{}`, `$(...)`, кавычки и экранирование |
-| **Права доступа** | `chmod`, `chown`, `umask`, `su`, `sudo` |
-| **Процессы** | `ps`, `top`, `jobs`, `bg`, `fg`, `kill` |
-| **Окружение** | `printenv`, `set`, `alias`, `export`, `.bashrc` |
-| **Поиск** | `locate`, `find`, `xargs` |
-| **Регулярные выражения** | `grep`, метасимволы, POSIX-классы символов |
-| **Обработка текста** | `sort`, `uniq`, `cut`, `paste`, `join`, `tr`, `sed` |
-| **Архивация** | `tar`, `gzip`, `bzip2`, `zip`, `rsync` |
-| **Сети** | `ping`, `traceroute`, `ip`, `ssh`, `scp`, `sftp`, `curl`, `wget` |
-| **Накопители** | `mount`, `umount`, `fdisk`, `mkfs`, `dd`, `df`, `du` |
-| **Сценарии** | `#!/bin/bash`, `if`, `case`, `while`, `until`, `for`, функции, массивы |
+| **Navigation** | `pwd`, `cd`, `ls` |
+| **Files and directories** | `cp`, `mv`, `rm`, `mkdir`, `ln` |
+| **Viewing files** | `cat`, `less`, `head`, `tail`, `file` |
+| **Redirection** | `>`, `>>`, `<`, `\|`, `tee` |
+| **Expansion** | `*`, `?`, `{}`, `$(...)`, quoting and escaping |
+| **Permissions** | `chmod`, `chown`, `umask`, `su`, `sudo` |
+| **Processes** | `ps`, `top`, `jobs`, `bg`, `fg`, `kill` |
+| **Environment** | `printenv`, `set`, `alias`, `export`, `.bashrc` |
+| **Searching** | `locate`, `find`, `xargs` |
+| **Regular expressions** | `grep`, metacharacters, POSIX character classes |
+| **Text processing** | `sort`, `uniq`, `cut`, `paste`, `join`, `tr`, `sed` |
+| **Archiving** | `tar`, `gzip`, `bzip2`, `zip`, `rsync` |
+| **Networking** | `ping`, `traceroute`, `ip`, `ssh`, `scp`, `sftp`, `curl`, `wget` |
+| **Storage media** | `mount`, `umount`, `fdisk`, `mkfs`, `dd`, `df`, `du` |
+| **Scripting** | `#!/bin/bash`, `if`, `case`, `while`, `until`, `for`, functions, arrays |
 
 ---
 
-## 📜 Чему учит Часть IV
+## What Part 4 Teaches
 
-| Приём | Зачем |
+| Technique | Why |
 |---|---|
-| **Шебанг и права на запуск** | Превратить текстовый файл в программу |
-| **Проектирование сверху вниз** | Разбивать задачу на функции, а не писать «простыню» |
-| **`if` и `[[ ]]`** | Проверять условия, файлы и строки без неожиданностей |
-| **`read`** | Принимать данные от пользователя и проверять их |
-| **`while` / `until`** | Обрабатывать потоки и файлы построчно |
-| **`trap`, `set -u`, `set -x`** | Корректно завершаться и находить ошибки |
-| **`case`** | Разбирать меню и варианты вместо лестницы `elif` |
-| **Позиционные параметры, `getopts`** | Делать сценарии с нормальным интерфейсом |
-| **Арифметика и `printf`** | Считать и выводить результат читаемо |
-| **Массивы** | Хранить наборы значений, а не склеивать строки |
+| **Shebang and execute permission** | Turn a text file into a program |
+| **Top-down design** | Split a task into functions instead of one long wall of code |
+| **`if` and `[[ ]]`** | Test conditions, files and strings without surprises |
+| **`read`** | Take input from the user and validate it |
+| **`while` / `until`** | Process streams and files line by line |
+| **`trap`, `set -u`, `set -x`** | Exit cleanly and track down bugs |
+| **`case`** | Handle menus and options instead of an `elif` ladder |
+| **Positional parameters, `getopts`** | Give scripts a proper command-line interface |
+| **Arithmetic and `printf`** | Calculate and print results readably |
+| **Arrays** | Store sets of values instead of gluing strings together |
 
 ---
 
-## ⚠️ Важные предостережения
+## Important Warnings
 
 ```bash
-rm -rf /                 # никогда
-dd if=... of=/dev/sda    # сначала трижды проверьте of=
-chmod -R 777 /           # не «починит», а сломает систему
+# never
+rm -rf /
+# check of= three times first
+dd if=... of=/dev/sda
+# won't "fix" anything — it will break the system
+chmod -R 777 /
 ```
 
-Все разрушительные операции отрабатывайте в виртуальной машине или в каталоге-песочнице. Команда `rm` в Linux не спрашивает подтверждения и не имеет «Корзины».
+Practice all destructive operations in a virtual machine or a sandbox directory. In Linux, `rm` does not ask for confirmation and there is no Recycle Bin.
 
 ---
 
-## 🔗 Материалы
+## Resources
 
-- Официальный сайт книги и бесплатные PDF: **linuxcommand.org**
-- `man bash` — исчерпывающее руководство по оболочке
-- `info coreutils` — документация GNU-утилит
-- Руководство по Bash от GNU: **gnu.org/software/bash/manual**
-
----
-
-## 📄 Лицензия
-
-Интернет-издание распространяется по лицензии **Creative Commons Attribution-NonCommercial-NoDerivatives** (CC BY-NC-ND): свободное копирование и распространение без изменений и без коммерческого использования. Авторские права © Уильям Шоттс. Печатное издание выпускается No Starch Press, русское издание — издателем-правообладателем перевода.
+- Official book site and free PDFs: **linuxcommand.org**
+- `man bash` — the complete shell reference
+- `info coreutils` — GNU core utilities documentation
+- GNU Bash manual: **gnu.org/software/bash/manual**
 
 ---
 
-## 📖 Колофон
+## License
+
+The online edition is distributed under the **Creative Commons Attribution-NonCommercial-NoDerivatives** license (CC BY-NC-ND): free copying and sharing, without changes and without commercial use. Copyright © William Shotts. The print edition is published by No Starch Press; the Russian print edition is published separately by the holder of the translation rights.
+
+---
+
+## Colophon
 
 <p align="center">
-  <img src="https://img.shields.io/badge/2%20Тимофею-3%3A16--17-6b4f2a?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/2%20Timothy-3%3A16--17-6b4f2a?style=for-the-badge"/>
 </p>
 
 <blockquote align="center">
-  <p><em>Всё Писание богодухновенно и полезно для научения,<br/>
-  для обличения, для исправления, для наставления в праведности,<br/>
-  да будет совершен Божий человек,<br/>
-  ко всякому делу приготовлен.</em></p>
-  <p><strong>— Второе послание к Тимофею 3:16–17</strong><br/>
-  <sub>Синодальный перевод</sub></p>
+  <p><em>All scripture is given by inspiration of God, and is profitable for doctrine,<br/>
+  for reproof, for correction, for instruction in righteousness:<br/>
+  That the man of God may be perfect,<br/>
+  throughly furnished unto all good works.</em></p>
+  <p><strong>— 2 Timothy 3:16–17</strong><br/>
+  <sub>King James Version</sub></p>
 </blockquote>
-
